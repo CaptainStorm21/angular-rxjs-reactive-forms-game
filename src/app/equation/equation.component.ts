@@ -43,10 +43,23 @@ export class EquationComponent implements OnInit {
   ngOnInit(): void {
     // console.log(this.mathForm.statusChanges)
     this.mathForm.statusChanges.subscribe(value => {
-      console.log(value)
+      if (value === 'INVALID') {
+        return;
+      }
+      // this.mathForm.controls.a.setValue(this.randomNumber());
+      // this.mathForm.controls.b.setValue(this.randomNumber());
+      // this.mathForm.controls.answer.setValue('');
+      // console.log(value)
+
+//pathValue only updates 1 or 2. we can remove a: or b:
+      this.mathForm.setValue({
+        a: this.randomNumber(),
+        b: this.randomNumber(),
+        answer: ''
+      })
+
     })
   }
-
   randomNumber() {
     return Math.floor(Math.random() * 10);
   }
