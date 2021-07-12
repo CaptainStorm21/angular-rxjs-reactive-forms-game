@@ -39,7 +39,13 @@ export class EquationComponent implements OnInit {
     return this.mathForm.value.b;
   }
 
-  ngOnInit(): void {}
+  //whatever is inside of ngOnInit will start up as soon as the component is fired
+  ngOnInit(): void {
+    // console.log(this.mathForm.statusChanges)
+    this.mathForm.statusChanges.subscribe(value => {
+      console.log(value)
+    })
+  }
 
   randomNumber() {
     return Math.floor(Math.random() * 10);
