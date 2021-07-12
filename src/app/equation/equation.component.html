@@ -1,5 +1,19 @@
 <form [formGroup]="mathForm">
   <!-- {{ mathForm.controls.a }} +  {{ mathForm.controls.b }} -->
 
-  {{ a }} + {{ b }} = 
+  {{ a }} + {{ b }} =
+  <input formControlName="answer"/>
+
 </form>
+
+<hr/>
+
+<div>
+  Form is invalid: {{ mathForm.valid }}
+</div>
+<div>
+  Form values: {{ mathForm.value | json }}
+</div>
+<div>
+  Form errors: {{ mathForm.errors | json }}
+</div>
