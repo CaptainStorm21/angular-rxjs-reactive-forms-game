@@ -17,15 +17,15 @@ export class EquationComponent implements OnInit {
       answer: new FormControl(''),
     },
     [
-        /*
-        const { a, b, answer } => {
-        if (a + b === parseInt(answer)){
-        return null
-        }
-        }
-        */
+      /*
+      const { a, b, answer } => {
+      if (a + b === parseInt(answer)){
+      return null
+      }
+      }
+      */
 
-        MathValidators.addition
+      MathValidators.addition('answer', 'a', 'b')
     ]
   );
 
