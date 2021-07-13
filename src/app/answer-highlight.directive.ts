@@ -26,6 +26,11 @@ export class AnswerHighlightDirective {
 
       )
       .subscribe(value => {
+        if (value < 0.2) {
+          this.el.nativeElement.classList.add('close');
+        } else {
+          this.el.nativeElement.classList.remove('close');
+        }
       console.log(value)
     })
   }
