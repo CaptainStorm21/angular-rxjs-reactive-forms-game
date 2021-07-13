@@ -1,23 +1,24 @@
-<form [formGroup]="mathForm">
-  <!-- {{ mathForm.controls.a }} +  {{ mathForm.controls.b }} -->
-
-  {{ a }} + {{ b }} =
-  <input formControlName="answer" />
-
-</form>
-
-
-{{ secondsPerSolution | number: '1.1-3' }}
-
-<hr />
-
-<div>
-  Form is invalid: {{ mathForm.valid }}
+<div class="container-fluid">
+<h2>How's your math?</h2>
+  <form [formGroup]="mathForm">
+    <!-- {{ mathForm.controls.a }} +  {{ mathForm.controls.b }} -->
+<div class="stats">
+    {{ a }} + {{ b }} =
+    <input formControlName="answer" />
 </div>
-<div>
-  Form values: {{ mathForm.value | json }}
-</div>
-<div>
-  Form errors: {{ mathForm.errors | json }}
-</div>
+  </form>
+  <div class="stats">
+    <b>{{ secondsPerSolution | number: '1.1-3' }}</b>
+  </div>
+  <hr />
 
+  <div>
+    Form is invalid: {{ mathForm.valid }}
+  </div>
+  <div>
+    Form values: {{ mathForm.value | json }}
+  </div>
+  <div>
+    Form errors: {{ mathForm.errors | json }}
+  </div>
+</div>

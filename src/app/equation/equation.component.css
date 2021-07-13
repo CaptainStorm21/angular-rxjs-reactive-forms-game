@@ -1,0 +1,27 @@
+
+input:focus {
+  outline: none !important;
+}
+
+form {
+  font-size: 96px;
+}
+
+input {
+  font-size: 24px;
+  display: block;
+  margin : 0 auto;
+  outline: none !important;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.stats {
+  bottom: 100px;
+  text-align: center;
+  font-size: 24px;
+}

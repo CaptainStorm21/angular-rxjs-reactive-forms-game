@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  width: 70%;
+  padding: 10px;
+  border: 1px solid palevioletred;
+}
+
+
+h2 {
+  text-align: center;
+  background-color: powderblue;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
